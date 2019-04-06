@@ -1,0 +1,11 @@
+1. Sum of Two Numbers
+	Write a program that stores the integers 50 and 100 in variables, and stores the sum of these two in a variable named total. 
+
+2. Sales Prediction
+	The East Coast sales division of a company generates 58 percent of total sales. Based on that percentage, write a program that will predict how much the East Coast division will generate if the company has $8.6 million in sales this year. 
+
+3. Sales Tax
+	Write a program that will compute the total sales tax on a $95 purchase. Assume the state sales tax is 4 percent, and the county sales tax is 2 percent. 
+
+4. Restaurant Bill
+	Write a program that computes the tax and tip on a restaurant bill for a patron with a $88.67 meal charge. The tax should be 6.75 percent of the meal cost. The tip should
