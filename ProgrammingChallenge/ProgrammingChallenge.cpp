@@ -7,11 +7,45 @@
 
 int main()
 {
-	std::cout << "Called Other File";
+	char userCharInputChapter;
+	char userCharInputChallenge;
+	bool shouldSwitchLoop = true;
 
-	Chapter2_Challenge1();
-	system("PAUSE");
-	system("CLS");
+	while (shouldSwitchLoop)
+	{
+		std::cout << "Select a chapter to run ('1' to '2'): ";
+		std::cin >> userCharInputChapter;
+		switch (userCharInputChapter)
+		{
+		case '1':
+			std::cout << "There are no challenges for Chapter " << userCharInputChapter << " please choose another option.";
+			shouldSwitchLoop = true;
+			system("PAUSE");
+			break;
+		case '2':
+			std::cout << "Select a challenge to run ('1' to '2'): ";
+			std::cin >> userCharInputChallenge;
+			switch (userCharInputChallenge)
+			{
+			case '1':
+				Chapter2_Challenge1();
+				break;
+			case '2':
+				Chapter2_Challenge2();
+				break;
+			default:
+				break;
+			}
+			std::cout << std::endl;
+			system("PAUSE");
+			break;
+		default:
+			std::cout << "The option you chose is an invalid option please try again" << std::endl;
+			system("PAUSE");
+			break;
+		}
+		system("CLS");
+	}
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

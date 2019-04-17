@@ -153,12 +153,14 @@
   <ItemGroup>
     <ClInclude Include="Chapter2_Challenge2.h" />
     <ClInclude Include="Chapter2_Challenge1.h" />
+    <ClInclude Include="Chapter2_Challenge3.h" />
     <ClInclude Include="Chapter2_Challenges.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="ProgrammingChallenge.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Chapter2_Challenge1.cpp" />
+    <ClCompile Include="Chapter2_Challenge3.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -171,6 +173,7 @@
   <ItemGroup>
     <Text Include="Chapter1_Challenges.txt" />
     <Text Include="Chapter2_Challenges.txt" />
+    <Text Include="TODO.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -39,6 +39,9 @@
     <ClInclude Include="Chapter2_Challenge2.h">
       <Filter>Header Files\Chapter2</Filter>
     </ClInclude>
+    <ClInclude Include="Chapter2_Challenge3.h">
+      <Filter>Header Files\Chapter2</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -53,6 +56,9 @@
     <ClCompile Include="Chapter2_Challenge2.cpp">
       <Filter>Source Files\Chapter2</Filter>
     </ClCompile>
+    <ClCompile Include="Chapter2_Challenge3.cpp">
+      <Filter>Source Files\Chapter2</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Chapter1_Challenges.txt">
@@ -60,6 +66,9 @@
     </Text>
     <Text Include="Chapter2_Challenges.txt">
       <Filter>Source Files\Chapter2</Filter>
+    </Text>
+    <Text Include="TODO.txt">
+      <Filter>Source Files</Filter>
     </Text>
   </ItemGroup>
 </Project>

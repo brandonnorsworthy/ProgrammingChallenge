@@ -12,6 +12,6 @@ void Chapter2_Challenge1() {
 	int num2 = 200;
 
 	int total = num1 + num2;
-
+	
 	return;
 }
