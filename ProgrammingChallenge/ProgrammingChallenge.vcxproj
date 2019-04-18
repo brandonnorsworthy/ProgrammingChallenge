@@ -151,14 +151,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Chapter2.h" />
     <ClInclude Include="Chapter2_Challenge2.h" />
     <ClInclude Include="Chapter2_Challenge1.h" />
     <ClInclude Include="Chapter2_Challenge3.h" />
-    <ClInclude Include="Chapter2_Challenges.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="ProgrammingChallenge.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Chapter2.cpp" />
     <ClCompile Include="Chapter2_Challenge1.cpp" />
     <ClCompile Include="Chapter2_Challenge3.cpp" />
     <ClCompile Include="pch.cpp">

@@ -1,3 +1,4 @@
+//COPYRIGHT 2019 BY BRANDON NORSWORTHY
 // ProgrammingChallenge.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
@@ -5,27 +6,50 @@
 #include "ProgrammingChallenge.h"
 #include <iostream>
 
+int main();
+void selectProgramChapter(int Chapter);
+bool shouldRunAnotherProgram();
+void breakConsole();
+
 int main()
 {
-	char userCharInputChapter;
-	char userCharInputChallenge;
-	bool shouldSwitchLoop = true;
+	int userInputChapterInt = NULL;
+	bool shouldWhileContinueLooping = true;
 
-	while (shouldSwitchLoop)
+	while (shouldWhileContinueLooping)
 	{
-		std::cout << "Select a chapter to run ('1' to '2'): ";
-		std::cin >> userCharInputChapter;
-		switch (userCharInputChapter)
+		std::cout << "Select a chapter to run: ";
+		std::cin >> userInputChapterInt;
+
+		selectProgramChapter(userInputChapterInt);
+		shouldWhileContinueLooping = shouldRunAnotherProgram();
+	}
+}
+
+//TODO function comment
+void selectProgramChapter(int Chapter)
+{
+	bool shouldWhileLoopContinueLoopingReturn = true; //return variable //TODO remove this
+	bool shouldWhileLoopContinueLoopingThis = false; //set to false since only default case needs to change the value
+
+	breakConsole();
+
+	while (shouldWhileLoopContinueLoopingThis)
+	{
+		shouldWhileLoopContinueLoopingThis = false;
+
+		switch (Chapter)
 		{
-		case '1':
-			std::cout << "There are no challenges for Chapter " << userCharInputChapter << " please choose another option.";
-			shouldSwitchLoop = true;
-			system("PAUSE");
+		case 1:
+			std::cout << "There are no challenges for Chapter " << Chapter << " please choose another option.";
+			Chapter = true;
 			break;
-		case '2':
+		case 2:
 			std::cout << "Select a challenge to run ('1' to '2'): ";
-			std::cin >> userCharInputChallenge;
-			switch (userCharInputChallenge)
+			std::cin >> Chapter;
+
+			//TODO move this to other file program selections belong in chapter file
+			switch (Chapter)
 			{
 			case '1':
 				Chapter2_Challenge1();
@@ -36,25 +60,36 @@ int main()
 			default:
 				break;
 			}
+			//--------------------------------------
+
 			std::cout << std::endl;
-			system("PAUSE");
 			break;
+		//TODO case 3 fill out in prep of chapter 3
 		default:
 			std::cout << "The option you chose is an invalid option please try again" << std::endl;
-			system("PAUSE");
+			shouldWhileLoopContinueLoopingThis = true;
 			break;
 		}
-		system("CLS");
 	}
+
+	breakConsole();
+	system("PAUSE");
+	system("CLS"); //clears the console, if this point is reached a new program is either going to be run or the program will be terminated.
+
+	return;
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
+//TODO function comment
+bool shouldRunAnotherProgram()
+{
+	//TODO make this function ask user for input and return the input based on if they want to run it again or not
+	return false;
+}
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+//This puts a break in the console to help break up content you are seeing.
+void breakConsole()
+{
+	std::cout << std::endl << "-------------------------------------------------------" << std::endl;
+	
+	return;
+}

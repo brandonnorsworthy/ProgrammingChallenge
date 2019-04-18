@@ -1,2 +1,1 @@
-#TODO
-instead of multiple challenge files only have a file for each chapter if later on the files become too big have the chapters split up.
+//TODO instead of multiple challenge files only have a file for each chapter if later on the files become too big have the chapters split up.

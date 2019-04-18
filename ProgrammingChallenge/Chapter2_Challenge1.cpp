@@ -1,3 +1,4 @@
+//COPYRIGHT 2019 BY BRANDON NORSWORTHY
 #include "pch.h"
 #include <iostream>
 

@@ -1,3 +1,5 @@
+//COPYRIGHT 2019 BY BRANDON NORSWORTHY
+
 // pch.cpp: source file corresponding to pre-compiled header; necessary for compilation to succeed
 
 #include "pch.h"
