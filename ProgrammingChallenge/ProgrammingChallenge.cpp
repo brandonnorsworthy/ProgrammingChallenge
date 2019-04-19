@@ -1,13 +1,11 @@
 //COPYRIGHT 2019 BY BRANDON NORSWORTHY
-// ProgrammingChallenge.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
 
 #include "pch.h"
 #include "ProgrammingChallenge.h"
 #include <iostream>
 
 int main();
-void selectProgramChapter(int Chapter);
+void selectProgramChapter();
 bool shouldRunAnotherProgram();
 void breakConsole();
 
@@ -18,78 +16,83 @@ int main()
 
 	while (shouldWhileContinueLooping)
 	{
-		std::cout << "Select a chapter to run: ";
-		std::cin >> userInputChapterInt;
-
-		selectProgramChapter(userInputChapterInt);
+		selectProgramChapter();
 		shouldWhileContinueLooping = shouldRunAnotherProgram();
+		system("CLS"); //clears the console, if this point is reached a new program is either going to be run or the program will be terminated.
 	}
 }
 
-//TODO function comment
-void selectProgramChapter(int Chapter)
+//Takes input from user to select corresponding chapter program to run asks for new input if chapter selected or error was wrong
+void selectProgramChapter()
 {
-	bool shouldWhileLoopContinueLoopingReturn = true; //return variable //TODO remove this
-	bool shouldWhileLoopContinueLoopingThis = false; //set to false since only default case needs to change the value
+	bool shouldWhileContinueLooping = true;
+	int Chapter = NULL;
 
-	breakConsole();
-
-	while (shouldWhileLoopContinueLoopingThis)
+	while (shouldWhileContinueLooping)
 	{
-		shouldWhileLoopContinueLoopingThis = false;
+		shouldWhileContinueLooping = false;
+
+		std::cout << "Select a chapter to run: ";
+		std::cin >> Chapter;
+
+		breakConsole();
 
 		switch (Chapter)
 		{
 		case 1:
-			std::cout << "There are no challenges for Chapter " << Chapter << " please choose another option.";
-			Chapter = true;
+			std::cout << "There are no challenges for Chapter " << Chapter << " please choose another option." << std::endl;
+			shouldWhileContinueLooping = true;
 			break;
 		case 2:
-			std::cout << "Select a challenge to run ('1' to '2'): ";
-			std::cin >> Chapter;
-
-			//TODO move this to other file program selections belong in chapter file
-			switch (Chapter)
-			{
-			case '1':
-				Chapter2_Challenge1();
-				break;
-			case '2':
-				Chapter2_Challenge2();
-				break;
-			default:
-				break;
-			}
-			//--------------------------------------
-
-			std::cout << std::endl;
+			Chapter2();
 			break;
-		//TODO case 3 fill out in prep of chapter 3
+			//TODO case 3 fill out in prep of chapter 3
 		default:
 			std::cout << "The option you chose is an invalid option please try again" << std::endl;
-			shouldWhileLoopContinueLoopingThis = true;
+			shouldWhileContinueLooping = true;
 			break;
 		}
 	}
 
 	breakConsole();
 	system("PAUSE");
-	system("CLS"); //clears the console, if this point is reached a new program is either going to be run or the program will be terminated.
 
 	return;
 }
 
-//TODO function comment
+//Asks the user if they would like to run another program and takes the input to make sure it is valid returning the choice that user made
 bool shouldRunAnotherProgram()
 {
-	//TODO make this function ask user for input and return the input based on if they want to run it again or not
-	return false;
+	bool shouldRunAnotherProgramReturn = false;
+	char userInputChoiceChar = NULL;
+
+	while ((userInputChoiceChar != 'Y') && (userInputChoiceChar != 'N'))
+	{
+		std::cout << "Would you like to run another program? (Y/N):";
+		std::cin >> userInputChoiceChar;
+		userInputChoiceChar = toupper(userInputChoiceChar);
+	}
+
+	switch (userInputChoiceChar)
+	{
+	case 'Y':
+		shouldRunAnotherProgramReturn = true;
+		break;
+	case 'N':
+		shouldRunAnotherProgramReturn = false;
+		break;
+	default:
+		std::cout << "The option you chose is an invalid option please try again" << std::endl;
+		break;
+	}
+
+	return shouldRunAnotherProgramReturn;
 }
 
 //This puts a break in the console to help break up content you are seeing.
 void breakConsole()
 {
-	std::cout << std::endl << "-------------------------------------------------------" << std::endl;
+	std::cout << "--------------------------------------------------------------------------------------------------------------" << std::endl;
 	
 	return;
 }

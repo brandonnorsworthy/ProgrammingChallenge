@@ -7,10 +7,12 @@ The East Coast sales division of a company generates 58 percent of total sales. 
 */
 
 void Chapter2_Challenge2() {
+	std::cout << "The East Coast sales division of a company generates 58 percent of total sales. Based on that percentage, write a program that will predict how much the East Coast division will generate if the company has $8.6 million in sales this year." << std::endl;
+
 	int totalSales = 8600000;
 	double generatedSalesPercent = 0.58;
 
-	std::cout << "Prediction: " << int(totalSales * generatedSalesPercent);
+	std::cout << "Prediction: " << int(totalSales * generatedSalesPercent) << std::endl;
 
 	return;
 }
